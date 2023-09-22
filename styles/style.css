@@ -113,7 +113,6 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
   display: inline-block;
   border: 1px solid #fff;
   vertical-align: middle;
@@ -217,13 +216,16 @@ ol {
   background: #545050;
 }
 
-input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
+.search-form__pseudo-checkbox::before {
   content: "";
-  position: absolute;
-  inset: 1px;
   background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
+  margin: 1px auto auto auto;
+}
+
+input[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
+  display: block;
 }
 
 .content__video-card:hover {
